@@ -10,7 +10,7 @@ async function login() {
             password: password.value
         });
         if (error) throw error
-        navigateTo("/clickup");
+        navigateTo("/dashboard");
     } catch (error) {
         document.getElementById("err").innerHTML = "Error: " + error.message;
     }
@@ -38,7 +38,7 @@ async function login() {
                     </div>
                     <button class="w-full px-6 py-5 mb-5 text-sm font-bold leading-none text-white transition duration-300 md:w-96 rounded-2xl hover:bg-purple-blue-600 focus:ring-4 focus:ring-purple-blue-100 bg-purple-blue-500" type="submit">Login</button>
                     <p class="text-sm leading-relaxed text-grey-900" id="err"></p>
-                    <p class="text-sm leading-relaxed text-grey-900" onclick="navigateTo('/clickup')">Not registered yet? <a href="/register" class="font-bold text-grey-700">Create an Account</a></p>
+                    <p class="text-sm leading-relaxed text-grey-900" onclick="navigateTo('/register')">Not registered yet? <a href="/register" class="font-bold text-grey-700">Create an Account</a></p>
                     </form>
                 </div>
             </div>
